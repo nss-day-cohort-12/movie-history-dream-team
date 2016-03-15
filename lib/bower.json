@@ -1,0 +1,22 @@
+{
+  "name": "lib",
+  "homepage": "https://github.com/nss-day-cohort-12/movie-history-dream-team",
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.0",
+    "angularfire": "^1.1.4",
+    "angular-route": "^1.5.0",
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.1"
+  }
+}
