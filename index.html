@@ -5,16 +5,20 @@
     <title>Dream Team</title>
 
    
-    <link rel="stylesheet" href="styles/styles.css">
+    <!-- <link rel="stylesheet" href="styles/styles.css"> -->
 </head>
-<body>
-	
-	
+<body ng-app="MovieHistory">
+	<div ng-view></div>
+
 	<script src="lib/bower_components/angular/angular.min.js"></script>
 	<script src="lib/bower_components/angular-route/angular-route.min.js"></script>
 	<script src="lib/bower_components/angularfire/dist/angularfire.min.js"></script>
 	<script src="lib/bower_components/firebase/firebase.js"></script>
+	<script src="lib/bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
-	<script src="app/app.js"></script> 
+	<script src="app/app.js"></script>
+	<script src="app/factories/authentication.js"></script>
+	<script src="app/controllers/login-ctrl.js"></script>
 </body>
 </html>
