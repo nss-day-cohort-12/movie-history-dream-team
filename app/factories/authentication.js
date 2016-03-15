@@ -1,6 +1,6 @@
 'use strict';
 
-app.factory("authenticate", function($q) {
+app.factory("authenticate", function($q, $http) {
 
 	let firebaseRef = new Firebase('https://dreamteam-music-hist.firebaseio.com/');
 
@@ -24,7 +24,9 @@ app.factory("authenticate", function($q) {
 			  if (error) {
 			    console.log("Error creating user:", error);
 			  } else {
+			  	console.log(user);
 			    console.log("Successfully created user account with uid:", userData.uid);
+			    $http.post('https://dreamteam-music-hist.firebaseio.com/users.json', {user});
 			    return resolve(userData);
 			  }
 			});
