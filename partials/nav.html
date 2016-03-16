@@ -4,10 +4,17 @@
 		 	<ul class="nav navbar-nav">
 		    	<li><a href="#/find-new-movies">Find New Movies</a></li>
 		    	<li><a href="#/your-movies">Search Your Movies</a></li>
-		  	</ul>
-		  	<ul class="nav navbar-nav navbar-right">
-		    	<li><a href="#/login" ng-click="logout()">Log Out</a></li>
-		  	</ul>
-		</div>
+		    </ul>
+		    <ul class="nav navbar-nav navbar-right">
+		   		<li>
+	      			<a href="#/welcome" ng-click="logout()">
+	        			<span ng-if="isAuthenticated()">Logout</span>
+	      			</a>
+	      			<a href="#/login">
+	        			<span ng-if="!isAuthenticated()">Login / Register</span>
+	      			</a>
+	    		</li>
+	    	</ul>
+	    </div>
  	</div>
 </nav>

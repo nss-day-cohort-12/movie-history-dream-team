@@ -30,7 +30,7 @@ app.controller("LoginCtrl", [
 			.then(
 				() => {
 					$location.path('/find-new-movies');
-					$scope.$apply();
+					// $scope.$apply();
 				},
 				(error) => console.log('could not authenticate user')
 			);
