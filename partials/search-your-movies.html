@@ -1,0 +1,13 @@
+<section ng-init="loadMovieList()">
+	<div ng-include="'partials/nav.html'"></div>
+	<div class="row">
+		<div ng-repeat="movie in movies" class="col-md-4">
+			<h5>{{ movie.movie.title }}</h5>
+			<img src="{{ movie.movie.poster }}">
+			<p>Released in {{ movie.movie.year }}</p>
+			<p>Starring {{ movie.movie.actors }}</p>
+			<p>Rating: {{ movie.movie.rating }}</p>
+			<button id="{{ movie.movie.key }}" ng-click="delete($event)">Delete</button>
+		</div>
+	</div>
+</section>

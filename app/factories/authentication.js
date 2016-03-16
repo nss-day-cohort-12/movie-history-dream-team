@@ -8,6 +8,7 @@ app.factory("authenticate", function($q, $http) {
 
 	Authenticate.isAuthenticated = () => {
 		let authData = firebaseRef.getAuth();
+		console.log(authData);
 		if (!authData) {
 			return false;
 		} else {
