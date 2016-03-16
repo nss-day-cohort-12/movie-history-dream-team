@@ -4,8 +4,9 @@ app.controller("UserMoviesCtrl", [
 	"$scope",
 	"get-users-movies",
 	"delete-movie",
+	"update-movies",
 
-	function ($scope, getUsersMovies, deleteMovie) {
+	function ($scope, getUsersMovies, deleteMovie, updateMovie) {
 
 		$scope.loadMovieList = () => {
 			getUsersMovies()
@@ -28,6 +29,11 @@ app.controller("UserMoviesCtrl", [
 			let key = $event.target.id;
 			console.log(key);
 			deleteMovie(key);
+		}
+
+		$scope.update = ($event) => {
+			let urlSnippet = $event.target.id;
+			updateMovie(urlSnippet);
 		}
 	}
 ]);
